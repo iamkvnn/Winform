@@ -17,3 +17,22 @@ C:\Users\khoa2\source\repos\WindowsForms2\obj\Debug\WindowsF.643E2648.Up2Date
 C:\Users\khoa2\source\repos\WindowsForms2\obj\Debug\WindowsForms2.fDashboard.resources
 C:\Users\khoa2\source\repos\WindowsForms2\obj\Debug\WindowsForms2.fProduct.resources
 C:\Users\khoa2\source\repos\WindowsForms2\obj\Debug\WindowsForms2.CustomTextBox.resources
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.exe
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.pdb
+D:\NAM 2\WINDOWS\WinformProject\Winform\bin\Debug\WindowsForms2.exe.config
+D:\NAM 2\WINDOWS\WinformProject\Winform\bin\Debug\WindowsForms2.exe
+D:\NAM 2\WINDOWS\WinformProject\Winform\bin\Debug\WindowsForms2.pdb
+D:\NAM 2\WINDOWS\WinformProject\Winform\bin\Debug\EntityFramework.dll
+D:\NAM 2\WINDOWS\WinformProject\Winform\bin\Debug\EntityFramework.SqlServer.dll
+D:\NAM 2\WINDOWS\WinformProject\Winform\bin\Debug\EntityFramework.xml
+D:\NAM 2\WINDOWS\WinformProject\Winform\bin\Debug\EntityFramework.SqlServer.xml
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.csproj.AssemblyReference.cache
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.CustomTextBox.resources
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.Properties.Resources.resources
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.csproj.GenerateResource.cache
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.csproj.CoreCompileInputs.cache
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsF.643E2648.Up2Date
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.FORM.fDashboard.resources
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.FORM.fLogin.resources
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.FORM.fProduct.resources
+D:\NAM 2\WINDOWS\WinformProject\Winform\obj\Debug\WindowsForms2.FORM.JewelryManagementApp.resources

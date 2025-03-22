@@ -7,24 +7,32 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsForms2
+namespace WindowsForms2.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class category
+    public partial class customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public category()
+        public customer()
         {
-            this.products = new HashSet<product>();
+            this.orders = new HashSet<order>();
         }
     
         public long id { get; set; }
-        public string name { get; set; }
-        public Nullable<long> parent_id { get; set; }
+        public string full_name { get; set; }
+        public string phone { get; set; }
+        public System.DateTime dob { get; set; }
+        public string gender { get; set; }
+        public string address { get; set; }
+        public string province { get; set; }
+        public string district { get; set; }
+        public string village { get; set; }
+        public System.DateTime join_at { get; set; }
+        public string membership_rank { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<product> products { get; set; }
+        public virtual ICollection<order> orders { get; set; }
     }
 }

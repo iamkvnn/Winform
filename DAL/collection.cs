@@ -7,31 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsForms2
+namespace WindowsForms2.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class voucher
+    public partial class collection
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public voucher()
+        public collection()
         {
-            this.orders = new HashSet<order>();
+            this.products = new HashSet<product>();
         }
     
         public long id { get; set; }
-        public string code { get; set; }
         public string name { get; set; }
-        public string type { get; set; }
-        public long discount_rate { get; set; }
-        public long minimum_to_apply { get; set; }
-        public long apply_limit { get; set; }
-        public long quantity { get; set; }
-        public System.DateTime valid_from { get; set; }
-        public System.DateTime valid_to { get; set; }
+        public string description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<order> orders { get; set; }
+        public virtual ICollection<product> products { get; set; }
     }
 }

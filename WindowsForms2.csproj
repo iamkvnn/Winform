@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -59,114 +59,117 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="attribute.cs">
+    <Compile Include="DAL\attribute.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="attribute_value.cs">
+    <Compile Include="DAL\attribute_value.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="category.cs">
+    <Compile Include="DAL\category.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="collection.cs">
+    <Compile Include="DAL\collection.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CustomButton.cs">
+    <Compile Include="CustomComponent\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomTextBox.Designer.cs">
+    <Compile Include="CustomComponent\CustomTextBox.Designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="customer.cs">
+    <Compile Include="DAL\customer.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataModel.Context.cs">
+    <Compile Include="DAL\DataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataModel.cs">
+    <Compile Include="DAL\DataModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataModel.Designer.cs">
+    <Compile Include="DAL\DataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="fDashboard.cs">
+    <Compile Include="DAL\ProductDAO.cs" />
+    <Compile Include="Exception\AlreadyExistException.cs" />
+    <Compile Include="Exception\ResourceNotFoundException.cs" />
+    <Compile Include="FORM\fDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fDashboard.Designer.cs">
+    <Compile Include="FORM\fDashboard.Designer.cs">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLogin.cs">
+    <Compile Include="FORM\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
+    <Compile Include="FORM\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fProduct.cs">
+    <Compile Include="FORM\fProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fProduct.Designer.cs">
+    <Compile Include="FORM\fProduct.Designer.cs">
       <DependentUpon>fProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="JewelryManagementApp.cs">
+    <Compile Include="FORM\JewelryManagementApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JewelryManagementApp.Designer.cs">
+    <Compile Include="FORM\JewelryManagementApp.Designer.cs">
       <DependentUpon>JewelryManagementApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomTextBox.cs">
+    <Compile Include="CustomComponent\CustomTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ModernDataGridView.cs">
+    <Compile Include="CustomComponent\ModernDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ModernPanel.cs">
+    <Compile Include="CustomComponent\ModernPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="notification.cs">
+    <Compile Include="DAL\notification.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="order.cs">
+    <Compile Include="DAL\order.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="order_item.cs">
+    <Compile Include="DAL\order_item.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="product.cs">
+    <Compile Include="DAL\product.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="product_size.cs">
+    <Compile Include="DAL\product_size.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="user.cs">
+    <Compile Include="DAL\user.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="user_notification.cs">
+    <Compile Include="DAL\user_notification.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="voucher.cs">
+    <Compile Include="DAL\voucher.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomTextBox.resx">
+    <EmbeddedResource Include="CustomComponent\CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fDashboard.resx">
+    <EmbeddedResource Include="FORM\fDashboard.resx">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLogin.resx">
+    <EmbeddedResource Include="FORM\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fProduct.resx">
+    <EmbeddedResource Include="FORM\fProduct.resx">
       <DependentUpon>fProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JewelryManagementApp.resx">
+    <EmbeddedResource Include="FORM\JewelryManagementApp.resx">
       <DependentUpon>JewelryManagementApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -179,11 +182,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="DataModel.edmx">
+    <EntityDeploy Include="DAL\DataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DataModel.edmx.diagram">
+    <None Include="DAL\DataModel.edmx.diagram">
       <DependentUpon>DataModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -201,12 +204,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataModel.Context.tt">
+    <Content Include="DAL\DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DataModel.tt">
+    <Content Include="DAL\DataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.cs</LastGenOutput>
@@ -228,6 +231,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
