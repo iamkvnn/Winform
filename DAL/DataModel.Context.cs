@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsForms2
+namespace WindowsForms2.DAL
 {
     using System;
     using System.Data.Entity;

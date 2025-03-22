@@ -1,4 +1,4 @@
-﻿namespace WindowsForms2
+﻿namespace WindowsForms2.FORM
 {
     partial class JewelryManagementApp
     {

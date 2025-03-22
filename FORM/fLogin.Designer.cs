@@ -1,4 +1,4 @@
-﻿namespace WindowsForms2
+﻿namespace WindowsForms2.FORM
 {
     partial class fLogin
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.password = new WindowsForms2.CustomTextBox();
             this.username = new WindowsForms2.CustomTextBox();
@@ -63,7 +62,7 @@
             this.password.BorderFocusColor = System.Drawing.Color.White;
             this.password.BorderRadius = 15;
             this.password.BorderSize = 3;
-            this.password.Font = new System.Drawing.Font("HarmonyOS Sans Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.Location = new System.Drawing.Point(82, 328);
             this.password.Margin = new System.Windows.Forms.Padding(4);
             this.password.Multiline = false;
@@ -72,7 +71,7 @@
             this.password.PasswordChar = true;
             this.password.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.password.PlaceholderText = "Mật khẩu";
-            this.password.Size = new System.Drawing.Size(338, 41);
+            this.password.Size = new System.Drawing.Size(338, 40);
             this.password.TabIndex = 2;
             this.password.Texts = "";
             this.password.UnderlinedStyle = false;
@@ -84,7 +83,7 @@
             this.username.BorderFocusColor = System.Drawing.Color.White;
             this.username.BorderRadius = 15;
             this.username.BorderSize = 3;
-            this.username.Font = new System.Drawing.Font("HarmonyOS Sans Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username.Location = new System.Drawing.Point(82, 243);
             this.username.Margin = new System.Windows.Forms.Padding(4);
             this.username.Multiline = false;
@@ -93,7 +92,7 @@
             this.username.PasswordChar = false;
             this.username.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.username.PlaceholderText = "Tài khoản";
-            this.username.Size = new System.Drawing.Size(338, 41);
+            this.username.Size = new System.Drawing.Size(338, 40);
             this.username.TabIndex = 1;
             this.username.Texts = "";
             this.username.UnderlinedStyle = false;
@@ -107,7 +106,7 @@
             this.btnLogin.BorderSize = 0;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("HarmonyOS Sans", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(159, 393);
             this.btnLogin.Name = "btnLogin";
@@ -122,12 +121,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Be Vietnam Pro Black", 28.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label4.Location = new System.Drawing.Point(34, 99);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(417, 72);
+            this.label4.Size = new System.Drawing.Size(370, 55);
             this.label4.TabIndex = 4;
             this.label4.Text = "Welcome Back!";
             // 
@@ -135,11 +134,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("HarmonyOS Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(78, 300);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 24);
+            this.label2.Size = new System.Drawing.Size(93, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật khẩu: ";
             // 
@@ -147,11 +146,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("HarmonyOS Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(78, 215);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 24);
+            this.label1.Size = new System.Drawing.Size(142, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập: ";
             // 
@@ -159,7 +158,7 @@
             // 
             this.label3.AllowDrop = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("DFVN Elyaris", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(5, 210);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -208,8 +207,6 @@
         }
 
         #endregion
-
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

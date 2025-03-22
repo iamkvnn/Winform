@@ -7,32 +7,35 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsForms2
+namespace WindowsForms2.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class customer
+    public partial class user
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public customer()
+        public user()
         {
             this.orders = new HashSet<order>();
+            this.user_notification = new HashSet<user_notification>();
         }
     
         public long id { get; set; }
         public string full_name { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public string email { get; set; }
         public string phone { get; set; }
         public System.DateTime dob { get; set; }
         public string gender { get; set; }
-        public string address { get; set; }
-        public string province { get; set; }
-        public string district { get; set; }
-        public string village { get; set; }
         public System.DateTime join_at { get; set; }
-        public string membership_rank { get; set; }
+        public string role { get; set; }
+        public string status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order> orders { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<user_notification> user_notification { get; set; }
     }
 }

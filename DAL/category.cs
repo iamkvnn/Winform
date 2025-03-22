@@ -7,22 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsForms2
+namespace WindowsForms2.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class collection
+    public partial class category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public collection()
+        public category()
         {
             this.products = new HashSet<product>();
         }
     
         public long id { get; set; }
         public string name { get; set; }
-        public string description { get; set; }
+        public Nullable<long> parent_id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<product> products { get; set; }

@@ -7,17 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsForms2.DAL;
+using WindowsForms2.Exception;
 
-namespace WindowsForms2
+namespace WindowsForms2.FORM
 {
     public partial class fProduct: Form
     {
-        private jewelryStoreManagementEntities _db;
+        private ProductDAO productDAO;
         public fProduct(jewelryStoreManagementEntities db)
         {
             InitializeComponent();
-            _db = db;
-            dgvSp.DataSource = _db.products.ToList();
+            productDAO = new ProductDAO(db);
+            dgvSp.DataSource = productDAO.GetProducts();
             dgvSp.Columns["id"].Width = 30;
         }
     }

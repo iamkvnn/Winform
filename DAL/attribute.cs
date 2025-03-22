@@ -7,26 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsForms2
+namespace WindowsForms2.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class notification
+    public partial class attribute
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public notification()
+        public attribute()
         {
-            this.user_notification = new HashSet<user_notification>();
+            this.attribute_value = new HashSet<attribute_value>();
         }
     
         public long id { get; set; }
-        public string title { get; set; }
-        public string content { get; set; }
-        public string type { get; set; }
-        public System.DateTime sent_at { get; set; }
+        public string name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<user_notification> user_notification { get; set; }
+        public virtual ICollection<attribute_value> attribute_value { get; set; }
     }
 }

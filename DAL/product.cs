@@ -7,38 +7,39 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsForms2
+namespace WindowsForms2.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class order
+    public partial class product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public order()
+        public product()
         {
+            this.attribute_value = new HashSet<attribute_value>();
             this.order_item = new HashSet<order_item>();
-            this.vouchers = new HashSet<voucher>();
+            this.product_size = new HashSet<product_size>();
         }
     
         public long id { get; set; }
-        public long customer_id { get; set; }
-        public System.DateTime order_date { get; set; }
+        public string title { get; set; }
+        public string description { get; set; }
+        public string material { get; set; }
+        public Nullable<long> category_id { get; set; }
+        public Nullable<long> collection_id { get; set; }
         public string status { get; set; }
-        public string shipping_method { get; set; }
-        public long shipping_fee { get; set; }
-        public long total_product_price { get; set; }
-        public long promotion_discount { get; set; }
-        public long free_ship_discount { get; set; }
-        public long total_price { get; set; }
-        public string note { get; set; }
-        public long user_id { get; set; }
+        public string image_name { get; set; }
+        public System.DateTime created_at { get; set; }
+        public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual customer customer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<attribute_value> attribute_value { get; set; }
+        public virtual category category { get; set; }
+        public virtual collection collection { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order_item> order_item { get; set; }
-        public virtual user user { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<voucher> vouchers { get; set; }
+        public virtual ICollection<product_size> product_size { get; set; }
     }
 }
