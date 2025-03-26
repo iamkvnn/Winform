@@ -35,7 +35,10 @@ namespace WindowsForms2.DAL
             return p;
         }
 
-        public product filterByField() { return null; }
+        public product filterByField() 
+        { 
+            return null; 
+        }
 
         public product save(product product)
         {

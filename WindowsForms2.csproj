@@ -98,9 +98,11 @@
     <Compile Include="DAL\attribute.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\AttributeDAO.cs" />
     <Compile Include="DAL\attribute_value.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Attribute_valueDAO.cs" />
     <Compile Include="DAL\category.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -116,6 +118,7 @@
     <Compile Include="DAL\customer.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\CustomerDAO.cs" />
     <Compile Include="DAL\DataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,7 +134,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\OrderDAO.cs" />
+    <Compile Include="DAL\Order_itemDAO.cs" />
+    <Compile Include="DAL\UserDAO.cs" />
     <Compile Include="DAL\ProductDAO.cs" />
+    <Compile Include="DAL\Product_sizeDAo.cs" />
+    <Compile Include="DAL\VoucherDAO.cs" />
     <Compile Include="Exception\AlreadyExistException.cs" />
     <Compile Include="Exception\ResourceNotFoundException.cs" />
     <Compile Include="FORM\fAddProduct.cs">
