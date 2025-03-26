@@ -59,6 +59,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomComponent\AttributeShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\AttributeShow.Designer.cs">
+      <DependentUpon>AttributeShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComponent\CustomComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\CustomeDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\CustomFlowLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\fBlur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\fBlur.Designer.cs">
+      <DependentUpon>fBlur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComponent\OrderRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\OrderRow.Designer.cs">
+      <DependentUpon>OrderRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComponent\SizeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\SizeControl.Designer.cs">
+      <DependentUpon>SizeControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL\attribute.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -98,6 +134,18 @@
     <Compile Include="DAL\ProductDAO.cs" />
     <Compile Include="Exception\AlreadyExistException.cs" />
     <Compile Include="Exception\ResourceNotFoundException.cs" />
+    <Compile Include="FORM\fAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fAddProduct.Designer.cs">
+      <DependentUpon>fAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fCategory.Designer.cs">
+      <DependentUpon>fCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\fDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +158,35 @@
     <Compile Include="FORM\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\fOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fOrder.Designer.cs">
+      <DependentUpon>fOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fPayment.Designer.cs">
+      <DependentUpon>fPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\fProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORM\fProduct.Designer.cs">
       <DependentUpon>fProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fSize.Designer.cs">
+      <DependentUpon>fSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fVoucher.Designer.cs">
+      <DependentUpon>fVoucher.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\JewelryManagementApp.cs">
       <SubType>Form</SubType>
@@ -126,9 +198,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CustomComponent\ModernDataGridView.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomComponent\ModernPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DAL\notification.cs">
@@ -157,8 +226,26 @@
     <Compile Include="DAL\voucher.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomComponent\AttributeShow.resx">
+      <DependentUpon>AttributeShow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomComponent\CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComponent\fBlur.resx">
+      <DependentUpon>fBlur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComponent\OrderRow.resx">
+      <DependentUpon>OrderRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComponent\SizeControl.resx">
+      <DependentUpon>SizeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fAddProduct.resx">
+      <DependentUpon>fAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fCategory.resx">
+      <DependentUpon>fCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\fDashboard.resx">
       <DependentUpon>fDashboard.cs</DependentUpon>
@@ -166,8 +253,20 @@
     <EmbeddedResource Include="FORM\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fOrder.resx">
+      <DependentUpon>fOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fPayment.resx">
+      <DependentUpon>fPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\fProduct.resx">
       <DependentUpon>fProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fSize.resx">
+      <DependentUpon>fSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fVoucher.resx">
+      <DependentUpon>fVoucher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\JewelryManagementApp.resx">
       <DependentUpon>JewelryManagementApp.cs</DependentUpon>
@@ -214,20 +313,38 @@
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Resources\add.png" />
     <Content Include="Resources\black-envelope-email-symbol.png" />
     <Content Include="Resources\blank-check-box.png" />
+    <Content Include="Resources\calendarDark.png" />
+    <Content Include="Resources\calendarWhite.png" />
+    <Content Include="Resources\cashier.png" />
     <Content Include="Resources\close-button.png" />
+    <Content Include="Resources\cross.png" />
+    <Content Include="Resources\customer.png" />
+    <Content Include="Resources\decrease.png" />
+    <Content Include="Resources\delete.png" />
     <Content Include="Resources\diamond-ring.png" />
+    <Content Include="Resources\edit.png" />
     <Content Include="Resources\expand-button.png" />
     <Content Include="Resources\fLoginBackground.png" />
+    <Content Include="Resources\home.png" />
     <Content Include="Resources\horizontal-line-remove-button.png" />
+    <Content Include="Resources\increase.png" />
     <Content Include="Resources\list-button-with-3-elements.png" />
+    <Content Include="Resources\maximize %281%29.png" />
+    <Content Include="Resources\maximize %282%29.png" />
+    <Content Include="Resources\maximize.png" />
+    <Content Include="Resources\plus.png" />
     <Content Include="Resources\refresh-button.png" />
     <Content Include="Resources\rounded-info-button.png" />
     <Content Include="Resources\rubbish-bin-delete-button.png" />
     <Content Include="Resources\searching-magnifying-glass.png" />
+    <Content Include="Resources\settings.png" />
     <Content Include="Resources\show-menu-button.png" />
+    <Content Include="Resources\stats.png" />
     <Content Include="Resources\underline-button.png" />
+    <Content Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

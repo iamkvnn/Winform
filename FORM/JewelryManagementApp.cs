@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,14 +15,50 @@ namespace WindowsForms2.FORM
 {
     public partial class JewelryManagementApp: Form
     {
+        private int borderSize = 0;
         private Form activeForm;
         private Button currentButton;
         private jewelryStoreManagementEntities _db;
         public JewelryManagementApp(jewelryStoreManagementEntities db)
         {
+            this.Padding = new Padding(borderSize);
             InitializeComponent();
             _db = db;
             btn_Dashboard_Click(btn_Dashboard, new EventArgs());
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.Style |= 0x20000; // <--- Minimize borderless form from taskbar
+                return cp;
+            }
+        }
+
+        private void JewelryManagementApp_ResizeEnd(object sender, EventArgs e)
+        {
+            this.Invalidate();
+        }
+        private void JewelryManagementApp_SizeChanged(object sender, EventArgs e)
+        {
+            this.Invalidate();
+        }
+        private void JewelryManagementApp_Activated(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
 
         private void JewelryManagementApp_FormClosing(object sender, FormClosingEventArgs e)
@@ -87,6 +125,26 @@ namespace WindowsForms2.FORM
         private void btnSp_Click(object sender, EventArgs e)
         {
             OpenChildForm(new fProduct(_db), sender as Button);
+        }
+
+        private void cateBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new fCategory(_db), sender as Button);
+        }
+
+        private void orderBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new fOrder(_db), sender as Button);
+        }
+
+        private void voucherBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new fVoucher(_db), sender as Button);
+        }
+
+        private void paymentBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new fPayment(_db), sender as Button);
         }
     }
 }

@@ -63,9 +63,19 @@ namespace WindowsForms2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_envelope_email_symbol {
             get {
-                object obj = ResourceManager.GetObject("black-envelope-email-symbol", resourceCulture);
+                object obj = ResourceManager.GetObject("black_envelope_email_symbol", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +85,37 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap blank_check_box {
             get {
-                object obj = ResourceManager.GetObject("blank-check-box", resourceCulture);
+                object obj = ResourceManager.GetObject("blank_check_box", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendarDark {
+            get {
+                object obj = ResourceManager.GetObject("calendarDark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendarWhite {
+            get {
+                object obj = ResourceManager.GetObject("calendarWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cashier {
+            get {
+                object obj = ResourceManager.GetObject("cashier", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,7 +125,47 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap close_button {
             get {
-                object obj = ResourceManager.GetObject("close-button", resourceCulture);
+                object obj = ResourceManager.GetObject("close_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cross {
+            get {
+                object obj = ResourceManager.GetObject("cross", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap customer {
+            get {
+                object obj = ResourceManager.GetObject("customer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap decrease {
+            get {
+                object obj = ResourceManager.GetObject("decrease", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete {
+            get {
+                object obj = ResourceManager.GetObject("delete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +175,17 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap diamond_ring {
             get {
-                object obj = ResourceManager.GetObject("diamond-ring", resourceCulture);
+                object obj = ResourceManager.GetObject("diamond_ring", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit {
+            get {
+                object obj = ResourceManager.GetObject("edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +195,7 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap expand_button {
             get {
-                object obj = ResourceManager.GetObject("expand-button", resourceCulture);
+                object obj = ResourceManager.GetObject("expand_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +213,9 @@ namespace WindowsForms2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fLoginBackground1 {
+        internal static System.Drawing.Bitmap home {
             get {
-                object obj = ResourceManager.GetObject("fLoginBackground1", resourceCulture);
+                object obj = ResourceManager.GetObject("home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -135,7 +225,17 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap horizontal_line_remove_button {
             get {
-                object obj = ResourceManager.GetObject("horizontal-line-remove-button", resourceCulture);
+                object obj = ResourceManager.GetObject("horizontal_line_remove_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap increase {
+            get {
+                object obj = ResourceManager.GetObject("increase", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -145,7 +245,47 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap list_button_with_3_elements {
             get {
-                object obj = ResourceManager.GetObject("list-button-with-3-elements", resourceCulture);
+                object obj = ResourceManager.GetObject("list_button_with_3_elements", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maximize {
+            get {
+                object obj = ResourceManager.GetObject("maximize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maximize__1_ {
+            get {
+                object obj = ResourceManager.GetObject("maximize__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maximize__2_ {
+            get {
+                object obj = ResourceManager.GetObject("maximize__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus {
+            get {
+                object obj = ResourceManager.GetObject("plus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -155,7 +295,7 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap refresh_button {
             get {
-                object obj = ResourceManager.GetObject("refresh-button", resourceCulture);
+                object obj = ResourceManager.GetObject("refresh_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -165,7 +305,7 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap rounded_info_button {
             get {
-                object obj = ResourceManager.GetObject("rounded-info-button", resourceCulture);
+                object obj = ResourceManager.GetObject("rounded_info_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -175,7 +315,7 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap rubbish_bin_delete_button {
             get {
-                object obj = ResourceManager.GetObject("rubbish-bin-delete-button", resourceCulture);
+                object obj = ResourceManager.GetObject("rubbish_bin_delete_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -185,7 +325,17 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap searching_magnifying_glass {
             get {
-                object obj = ResourceManager.GetObject("searching-magnifying-glass", resourceCulture);
+                object obj = ResourceManager.GetObject("searching_magnifying_glass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings {
+            get {
+                object obj = ResourceManager.GetObject("settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -195,7 +345,17 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap show_menu_button {
             get {
-                object obj = ResourceManager.GetObject("show-menu-button", resourceCulture);
+                object obj = ResourceManager.GetObject("show_menu_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stats {
+            get {
+                object obj = ResourceManager.GetObject("stats", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -205,7 +365,17 @@ namespace WindowsForms2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap underline_button {
             get {
-                object obj = ResourceManager.GetObject("underline-button", resourceCulture);
+                object obj = ResourceManager.GetObject("underline_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

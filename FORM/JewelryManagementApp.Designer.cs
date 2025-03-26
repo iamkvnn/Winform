@@ -29,51 +29,52 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.voucherBtn = new System.Windows.Forms.Button();
             this.btn_Dashboard = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.orderBtn = new System.Windows.Forms.Button();
+            this.cateBtn = new System.Windows.Forms.Button();
             this.btnSp = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.paymentBtn = new System.Windows.Forms.Button();
+            this.panelTitle = new System.Windows.Forms.Panel();
             this.lblCrrForm = new System.Windows.Forms.Label();
             this.btn_quit = new System.Windows.Forms.Button();
-            this.pContent = new System.Windows.Forms.Panel();
+            this.pContent = new WindowsForms2.CustomComponent.CustomPanel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.voucherBtn);
             this.panel1.Controls.Add(this.btn_Dashboard);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.orderBtn);
+            this.panel1.Controls.Add(this.cateBtn);
             this.panel1.Controls.Add(this.btnSp);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.paymentBtn);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(255, 853);
             this.panel1.TabIndex = 0;
             // 
-            // button7
+            // voucherBtn
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("HarmonyOS Sans", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.button7.Location = new System.Drawing.Point(1, 462);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(251, 38);
-            this.button7.TabIndex = 6;
-            this.button7.TabStop = false;
-            this.button7.Text = "Khuyến mãi";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = false;
+            this.voucherBtn.BackColor = System.Drawing.Color.Transparent;
+            this.voucherBtn.FlatAppearance.BorderSize = 0;
+            this.voucherBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.voucherBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voucherBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.voucherBtn.Location = new System.Drawing.Point(1, 473);
+            this.voucherBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.voucherBtn.Name = "voucherBtn";
+            this.voucherBtn.Size = new System.Drawing.Size(251, 38);
+            this.voucherBtn.TabIndex = 6;
+            this.voucherBtn.TabStop = false;
+            this.voucherBtn.Text = "Khuyến mãi";
+            this.voucherBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.voucherBtn.UseVisualStyleBackColor = false;
+            this.voucherBtn.Click += new System.EventHandler(this.voucherBtn_Click);
             // 
             // btn_Dashboard
             // 
@@ -82,7 +83,7 @@
             this.btn_Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Dashboard.Font = new System.Drawing.Font("HarmonyOS Sans", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.btn_Dashboard.Location = new System.Drawing.Point(1, 187);
+            this.btn_Dashboard.Location = new System.Drawing.Point(1, 198);
             this.btn_Dashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Dashboard.Name = "btn_Dashboard";
             this.btn_Dashboard.Size = new System.Drawing.Size(251, 38);
@@ -93,39 +94,41 @@
             this.btn_Dashboard.UseVisualStyleBackColor = false;
             this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
-            // button4
+            // orderBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("HarmonyOS Sans", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.button4.Location = new System.Drawing.Point(1, 352);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(251, 38);
-            this.button4.TabIndex = 3;
-            this.button4.TabStop = false;
-            this.button4.Text = "Đơn hàng";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.orderBtn.BackColor = System.Drawing.Color.Transparent;
+            this.orderBtn.FlatAppearance.BorderSize = 0;
+            this.orderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orderBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.orderBtn.Location = new System.Drawing.Point(1, 363);
+            this.orderBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.orderBtn.Name = "orderBtn";
+            this.orderBtn.Size = new System.Drawing.Size(251, 38);
+            this.orderBtn.TabIndex = 3;
+            this.orderBtn.TabStop = false;
+            this.orderBtn.Text = "Đơn hàng";
+            this.orderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.orderBtn.UseVisualStyleBackColor = false;
+            this.orderBtn.Click += new System.EventHandler(this.orderBtn_Click);
             // 
-            // button2
+            // cateBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("HarmonyOS Sans", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.button2.Location = new System.Drawing.Point(1, 297);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(251, 38);
-            this.button2.TabIndex = 1;
-            this.button2.TabStop = false;
-            this.button2.Text = "Danh mục";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.cateBtn.BackColor = System.Drawing.Color.Transparent;
+            this.cateBtn.FlatAppearance.BorderSize = 0;
+            this.cateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cateBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cateBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.cateBtn.Location = new System.Drawing.Point(1, 308);
+            this.cateBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.cateBtn.Name = "cateBtn";
+            this.cateBtn.Size = new System.Drawing.Size(251, 38);
+            this.cateBtn.TabIndex = 1;
+            this.cateBtn.TabStop = false;
+            this.cateBtn.Text = "Danh mục";
+            this.cateBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cateBtn.UseVisualStyleBackColor = false;
+            this.cateBtn.Click += new System.EventHandler(this.cateBtn_Click);
             // 
             // btnSp
             // 
@@ -134,7 +137,7 @@
             this.btnSp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSp.Font = new System.Drawing.Font("HarmonyOS Sans", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.btnSp.Location = new System.Drawing.Point(1, 242);
+            this.btnSp.Location = new System.Drawing.Point(1, 253);
             this.btnSp.Margin = new System.Windows.Forms.Padding(4);
             this.btnSp.Name = "btnSp";
             this.btnSp.Size = new System.Drawing.Size(251, 38);
@@ -145,33 +148,35 @@
             this.btnSp.UseVisualStyleBackColor = false;
             this.btnSp.Click += new System.EventHandler(this.btnSp_Click);
             // 
-            // button3
+            // paymentBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("HarmonyOS Sans", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.button3.Location = new System.Drawing.Point(1, 407);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(251, 38);
-            this.button3.TabIndex = 2;
-            this.button3.TabStop = false;
-            this.button3.Text = "Hóa đơn";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.paymentBtn.BackColor = System.Drawing.Color.Transparent;
+            this.paymentBtn.FlatAppearance.BorderSize = 0;
+            this.paymentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.paymentBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.paymentBtn.Location = new System.Drawing.Point(1, 418);
+            this.paymentBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.paymentBtn.Name = "paymentBtn";
+            this.paymentBtn.Size = new System.Drawing.Size(251, 38);
+            this.paymentBtn.TabIndex = 2;
+            this.paymentBtn.TabStop = false;
+            this.paymentBtn.Text = "Hóa đơn";
+            this.paymentBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.paymentBtn.UseVisualStyleBackColor = false;
+            this.paymentBtn.Click += new System.EventHandler(this.paymentBtn_Click);
             // 
-            // panel2
+            // panelTitle
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblCrrForm);
-            this.panel2.Controls.Add(this.btn_quit);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1561, 48);
-            this.panel2.TabIndex = 2;
+            this.panelTitle.BackColor = System.Drawing.Color.White;
+            this.panelTitle.Controls.Add(this.lblCrrForm);
+            this.panelTitle.Controls.Add(this.btn_quit);
+            this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Margin = new System.Windows.Forms.Padding(4);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(1561, 48);
+            this.panelTitle.TabIndex = 2;
+            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
             // lblCrrForm
             // 
@@ -201,9 +206,15 @@
             // 
             // pContent
             // 
-            this.pContent.Location = new System.Drawing.Point(259, 55);
+            this.pContent.BackColor = System.Drawing.Color.White;
+            this.pContent.BorderRadius = 50;
+            this.pContent.ForeColor = System.Drawing.Color.Black;
+            this.pContent.GradientAngle = 90F;
+            this.pContent.GradientBottomColor = System.Drawing.Color.White;
+            this.pContent.GradientTopColor = System.Drawing.Color.Azure;
+            this.pContent.Location = new System.Drawing.Point(262, 55);
             this.pContent.Name = "pContent";
-            this.pContent.Size = new System.Drawing.Size(1290, 783);
+            this.pContent.Size = new System.Drawing.Size(1287, 783);
             this.pContent.TabIndex = 3;
             // 
             // JewelryManagementApp
@@ -213,16 +224,19 @@
             this.ClientSize = new System.Drawing.Size(1561, 850);
             this.Controls.Add(this.pContent);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "JewelryManagementApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JewelryManagementApp.cs";
+            this.Activated += new System.EventHandler(this.JewelryManagementApp_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.JewelryManagementApp_FormClosing);
+            this.ResizeEnd += new System.EventHandler(this.JewelryManagementApp_ResizeEnd);
+            this.SizeChanged += new System.EventHandler(this.JewelryManagementApp_SizeChanged);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelTitle.ResumeLayout(false);
+            this.panelTitle.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -231,15 +245,15 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSp;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button cateBtn;
+        private System.Windows.Forms.Button orderBtn;
+        private System.Windows.Forms.Button paymentBtn;
+        private System.Windows.Forms.Button voucherBtn;
         private System.Windows.Forms.Button btn_Dashboard;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Button btn_quit;
         private System.Windows.Forms.Label lblCrrForm;
-        private System.Windows.Forms.Panel pContent;
+        private CustomComponent.CustomPanel pContent;
     }
 }
 

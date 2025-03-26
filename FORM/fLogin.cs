@@ -31,6 +31,7 @@ namespace WindowsForms2.FORM
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            /*
             if (this.username.Texts == "" || this.password.Texts == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
@@ -41,7 +42,7 @@ namespace WindowsForms2.FORM
             {
                 MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
                 return;
-            }
+            }*/
             JewelryManagementApp f = new JewelryManagementApp(db);
             this.Hide();
             f.ShowDialog();
