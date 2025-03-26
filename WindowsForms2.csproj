@@ -290,7 +290,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Compile Include="Properties\Settings.Designer.cs">
@@ -325,6 +325,7 @@
     <Content Include="Resources\decrease.png" />
     <Content Include="Resources\delete.png" />
     <Content Include="Resources\diamond-ring.png" />
+    <Content Include="Resources\direction.png" />
     <Content Include="Resources\edit.png" />
     <Content Include="Resources\expand-button.png" />
     <Content Include="Resources\fLoginBackground.png" />
@@ -339,6 +340,7 @@
     <Content Include="Resources\refresh-button.png" />
     <Content Include="Resources\rounded-info-button.png" />
     <Content Include="Resources\rubbish-bin-delete-button.png" />
+    <Content Include="Resources\search.png" />
     <Content Include="Resources\searching-magnifying-glass.png" />
     <Content Include="Resources\settings.png" />
     <Content Include="Resources\show-menu-button.png" />

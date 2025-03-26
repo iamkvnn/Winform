@@ -22,7 +22,6 @@ namespace WindowsForms2.CustomComponent
         private Color listTextColor = Color.DimGray;
         private Color borderColor = Color.MediumSlateBlue;
         private int borderSize = 1;
-        private int borderRadius = 0;
 
         //Items
         private ComboBox cmbList;
@@ -152,17 +151,6 @@ namespace WindowsForms2.CustomComponent
             {
                 borderSize = value;
                 this.Padding = new Padding(borderSize);//Border Size
-                AdjustComboBoxDimensions();
-            }
-        }
-
-        [Category("Custom Appearance")]
-        public int BorderRadius
-        {
-            get { return borderRadius; }
-            set
-            {
-                borderRadius = value;
                 AdjustComboBoxDimensions();
             }
         }
@@ -302,46 +290,6 @@ namespace WindowsForms2.CustomComponent
         }
         #endregion
 
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            Graphics graph = e.Graphics;
-
-            if (borderRadius > 1)//Rounded
-            {
-                //-Fields
-                var rectBorderSmooth = this.ClientRectangle;
-                var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
-                int smoothSize = borderSize > 0 ? borderSize : 1;
-
-                using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius))
-                using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
-                using (Pen penBorderSmooth = new Pen(this.Parent.BackColor, smoothSize))
-                using (Pen penBorder = new Pen(borderColor, borderSize))
-                {
-                    //-Drawing
-                    this.Region = new Region(pathBorderSmooth);//Set the rounded region of UserControl
-                    if (borderRadius > 15) SetCbBoxRoundedRegion();//Set the rounded region of component
-                    graph.SmoothingMode = SmoothingMode.AntiAlias;
-                    penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-                    //Draw border smoothing
-                    graph.DrawPath(penBorderSmooth, pathBorderSmooth);
-                    //Draw border
-                    graph.DrawPath(penBorder, pathBorder);
-                }
-            }
-            else //Square/Normal
-            {
-                //Draw border
-                using (Pen penBorder = new Pen(borderColor, borderSize))
-                {
-                    this.Region = new Region(this.ClientRectangle);
-                    penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-                    graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
-                }
-            }
-        }
-
         #region -> Private methods
         private void AdjustComboBoxDimensions()
         {
@@ -357,31 +305,6 @@ namespace WindowsForms2.CustomComponent
             }
         }
 
-        private GraphicsPath GetFigurePath(Rectangle rect, int radius)
-        {
-            GraphicsPath path = new GraphicsPath();
-            float curveSize = radius * 2F;
-
-            // Ensure radius doesn't exceed the bounds
-            if (curveSize > rect.Width) curveSize = rect.Width;
-            if (curveSize > rect.Height) curveSize = rect.Height;
-
-            path.StartFigure();
-            path.AddArc(rect.X, rect.Y, curveSize, curveSize, 180, 90);
-            path.AddArc(rect.Right - curveSize, rect.Y, curveSize, curveSize, 270, 90);
-            path.AddArc(rect.Right - curveSize, rect.Bottom - curveSize, curveSize, curveSize, 0, 90);
-            path.AddArc(rect.X, rect.Bottom - curveSize, curveSize, curveSize, 90, 90);
-            path.CloseFigure();
-            return path;
-        }
-
-        private void SetCbBoxRoundedRegion()
-        {
-            GraphicsPath pathTxt;
-            pathTxt = GetFigurePath(cmbList.ClientRectangle, borderSize * 2);
-            cmbList.Region = new Region(pathTxt);
-            pathTxt.Dispose();
-        }
         #endregion
 
         #region -> Event methods
