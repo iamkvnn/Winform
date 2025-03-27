@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -59,114 +74,245 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="attribute.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="BLL\CategoryBLL.cs" />
+    <Compile Include="BLL\CollectionBLL.cs" />
+    <Compile Include="CustomComponent\AttributeShow.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="attribute_value.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="CustomComponent\AttributeShow.Designer.cs">
+      <DependentUpon>AttributeShow.cs</DependentUpon>
     </Compile>
-    <Compile Include="category.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="CustomComponent\CustomComboBox.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="collection.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustomButton.cs">
+    <Compile Include="CustomComponent\CustomeDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomTextBox.Designer.cs">
+    <Compile Include="CustomComponent\CustomFlowLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\fBlur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\fBlur.Designer.cs">
+      <DependentUpon>fBlur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComponent\OrderRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\OrderRow.Designer.cs">
+      <DependentUpon>OrderRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComponent\SizeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\SizeControl.Designer.cs">
+      <DependentUpon>SizeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\AttributeBLL.cs" />
+    <Compile Include="BLL\Attribute_valueBLL.cs" />
+    <Compile Include="CustomComponent\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\CustomTextBox.Designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="customer.cs">
+    <Compile Include="BLL\CustomerBLL.cs" />
+    <Compile Include="BLL\OrderBLL.cs" />
+    <Compile Include="BLL\Order_itemBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="BLL\ProductBLL.cs" />
+    <Compile Include="BLL\Product_sizeBLL.cs" />
+    <Compile Include="BLL\VoucherBLL.cs" />
+    <Compile Include="DAL\attribute.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataModel.Context.cs">
+    <Compile Include="DAL\attribute_value.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\category.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\collection.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\customer.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataModel.cs">
+    <Compile Include="DAL\DataModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataModel.Designer.cs">
+    <Compile Include="DAL\DataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="fDashboard.cs">
+    <Compile Include="DAL\ModelDAO.cs" />
+    <Compile Include="DAL\notification.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\order.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\order_item.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\product.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\product_size.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\user.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\user_notification.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\voucher.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="exception\AlreadyExistException.cs" />
+    <Compile Include="exception\ResourceNotFoundException.cs" />
+    <Compile Include="FORM\fAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fDashboard.Designer.cs">
+    <Compile Include="FORM\fAddProduct.Designer.cs">
+      <DependentUpon>fAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fCategory.Designer.cs">
+      <DependentUpon>fCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fCustomer.Designer.cs">
+      <DependentUpon>fCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fDashboard.Designer.cs">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLogin.cs">
+    <Compile Include="FORM\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
+    <Compile Include="FORM\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fProduct.cs">
+    <Compile Include="FORM\fOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fProduct.Designer.cs">
+    <Compile Include="FORM\fOrder.Designer.cs">
+      <DependentUpon>fOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fPayment.Designer.cs">
+      <DependentUpon>fPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fProduct.Designer.cs">
       <DependentUpon>fProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="JewelryManagementApp.cs">
+    <Compile Include="FORM\fSize.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JewelryManagementApp.Designer.cs">
+    <Compile Include="FORM\fSize.Designer.cs">
+      <DependentUpon>fSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fStaff.Designer.cs">
+      <DependentUpon>fStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fVoucher.Designer.cs">
+      <DependentUpon>fVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\JewelryManagementApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\JewelryManagementApp.Designer.cs">
       <DependentUpon>JewelryManagementApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomTextBox.cs">
+    <Compile Include="CustomComponent\CustomTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ModernDataGridView.cs">
+    <Compile Include="CustomComponent\ModernDataGridView.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ModernPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="notification.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="order.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="order_item.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="product.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="product_size.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="user.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="user_notification.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="voucher.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="CustomTextBox.resx">
+    <EmbeddedResource Include="CustomComponent\AttributeShow.resx">
+      <DependentUpon>AttributeShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComponent\CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fDashboard.resx">
+    <EmbeddedResource Include="CustomComponent\fBlur.resx">
+      <DependentUpon>fBlur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComponent\OrderRow.resx">
+      <DependentUpon>OrderRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComponent\SizeControl.resx">
+      <DependentUpon>SizeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fAddProduct.resx">
+      <DependentUpon>fAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fCategory.resx">
+      <DependentUpon>fCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fCustomer.resx">
+      <DependentUpon>fCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fDashboard.resx">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLogin.resx">
+    <EmbeddedResource Include="FORM\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fProduct.resx">
+    <EmbeddedResource Include="FORM\fOrder.resx">
+      <DependentUpon>fOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fPayment.resx">
+      <DependentUpon>fPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fProduct.resx">
       <DependentUpon>fProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JewelryManagementApp.resx">
+    <EmbeddedResource Include="FORM\fSize.resx">
+      <DependentUpon>fSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fStaff.resx">
+      <DependentUpon>fStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fVoucher.resx">
+      <DependentUpon>fVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\JewelryManagementApp.resx">
       <DependentUpon>JewelryManagementApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -179,16 +325,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="DataModel.edmx">
+    <EntityDeploy Include="DAL\DataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DataModel.edmx.diagram">
+    <None Include="DAL\DataModel.edmx.diagram">
       <DependentUpon>DataModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Compile Include="Properties\Settings.Designer.cs">
@@ -201,33 +347,65 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataModel.Context.tt">
+    <Content Include="DAL\DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DataModel.tt">
+    <Content Include="DAL\DataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Resources\add.png" />
     <Content Include="Resources\black-envelope-email-symbol.png" />
     <Content Include="Resources\blank-check-box.png" />
+    <Content Include="Resources\calendarDark.png" />
+    <Content Include="Resources\calendarWhite.png" />
+    <Content Include="Resources\cashier.png" />
     <Content Include="Resources\close-button.png" />
+    <Content Include="Resources\cross.png" />
+    <Content Include="Resources\customer.png" />
+    <Content Include="Resources\decrease.png" />
+    <Content Include="Resources\delete.png" />
     <Content Include="Resources\diamond-ring.png" />
+    <Content Include="Resources\direction.png" />
+    <Content Include="Resources\edit.png" />
     <Content Include="Resources\expand-button.png" />
     <Content Include="Resources\fLoginBackground.png" />
+    <Content Include="Resources\home.png" />
     <Content Include="Resources\horizontal-line-remove-button.png" />
+    <Content Include="Resources\increase.png" />
     <Content Include="Resources\list-button-with-3-elements.png" />
+    <Content Include="Resources\maximize %281%29.png" />
+    <Content Include="Resources\maximize %282%29.png" />
+    <Content Include="Resources\maximize.png" />
+    <Content Include="Resources\plus.png" />
     <Content Include="Resources\refresh-button.png" />
     <Content Include="Resources\rounded-info-button.png" />
     <Content Include="Resources\rubbish-bin-delete-button.png" />
+    <Content Include="Resources\search.png" />
     <Content Include="Resources\searching-magnifying-glass.png" />
+    <Content Include="Resources\settings.png" />
     <Content Include="Resources\show-menu-button.png" />
+    <Content Include="Resources\stats.png" />
     <Content Include="Resources\underline-button.png" />
+    <Content Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

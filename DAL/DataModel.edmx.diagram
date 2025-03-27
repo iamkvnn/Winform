@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="61395840bacc440faadb81edcae56588" Name="Diagram1">
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.attribute" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.attribute_value" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.category" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.collection" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.customer" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.notification" Width="1.5" PointX="3" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.order_item" Width="1.5" PointX="7.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.order" Width="1.5" PointX="5.25" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.product" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.product_size" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.user_notification" Width="1.5" PointX="5.25" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.user" Width="1.5" PointX="3" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jewelryStoreManagementModel.voucher" Width="1.5" PointX="7.5" PointY="18.875" IsExpanded="true" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_attribute_value_attribute" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_attribute_value_product" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_pcategory" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_product_category" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_product_collection" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_orders_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_user_notification_notification" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_order_item_order" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_order_item_product" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_order_item_product_size" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_orders_user" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_product_size_product" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.FK_user_notification" ManuallyRouted="false" />
+        <AssociationConnector Association="jewelryStoreManagementModel.order_vouchers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
