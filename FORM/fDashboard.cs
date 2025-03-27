@@ -13,11 +13,9 @@ namespace WindowsForms2.FORM
 {
     public partial class fDashboard: Form
     {
-        private jewelryStoreManagementEntities _db;
-        public fDashboard(jewelryStoreManagementEntities db)
+        public fDashboard()
         {
-            InitializeComponent();
-            _db = db;   
+            InitializeComponent();  
         }
     }
 }

@@ -46,3 +46,5 @@ C:\Users\khoa2\source\repos\WindowsForms2\obj\Debug\WindowsForms2.FORM.fOrder.re
 C:\Users\khoa2\source\repos\WindowsForms2\obj\Debug\WindowsForms2.FORM.fPayment.resources
 C:\Users\khoa2\source\repos\WindowsForms2\obj\Debug\WindowsForms2.FORM.fVoucher.resources
 C:\Users\khoa2\source\repos\WindowsForms2\obj\Debug\WindowsForms2.CustomComponent.OrderRow.resources
+C:\Users\khoa2\source\repos\WindowsForms2\obj\Debug\WindowsForms2.FORM.fCustomer.resources
+C:\Users\khoa2\source\repos\WindowsForms2\obj\Debug\WindowsForms2.FORM.fStaff.resources

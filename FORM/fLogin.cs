@@ -14,36 +14,33 @@ namespace WindowsForms2.FORM
 {
     public partial class fLogin: Form
     {
-        private jewelryStoreManagementEntities db;
         public fLogin()
         {
             InitializeComponent();
             this.panel1.BackColor = Color.FromArgb(170, 255, 255, 255);
             this.btn_quit.BackColor = Color.FromArgb(170, 255, 255, 255);
-            this.db = new jewelryStoreManagementEntities();
         }
 
         private void btn_quit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            db.Dispose();
+            ModelDAO.Instance.Dispose();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            /*
-            if (this.username.Texts == "" || this.password.Texts == "")
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
-                return;
-            }
-            var user = db.users.Where(u => u.username == this.username.Texts && u.password == this.password.Texts).FirstOrDefault();
-            if (user == null)
-            {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
-                return;
-            }*/
-            JewelryManagementApp f = new JewelryManagementApp(db);
+            //if (this.username.Texts == "" || this.password.Texts == "")
+            //{
+            //    MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            //    return;
+            //}
+            //var user = db.users.Where(u => u.username == this.username.Texts && u.password == this.password.Texts).FirstOrDefault();
+            //if (user == null)
+            //{
+            //    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+            //    return;
+            //}
+            JewelryManagementApp f = new JewelryManagementApp();
             this.Hide();
             f.ShowDialog();
             this.Show();

@@ -30,27 +30,27 @@
         {
             this.dgvSp = new System.Windows.Forms.DataGridView();
             this.productInfoPanel = new System.Windows.Forms.Panel();
+            this.cancelBtn = new WindowsForms2.CustomButton();
+            this.updateProductBtn = new WindowsForms2.CustomButton();
+            this.manageSizeBtn = new WindowsForms2.CustomButton();
             this.label6 = new System.Windows.Forms.Label();
+            this.statusCbbox = new WindowsForms2.CustomComponent.CustomComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.collectionCbbox = new WindowsForms2.CustomComponent.CustomComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.flpAttribute = new System.Windows.Forms.FlowLayoutPanel();
+            this.addAttributeBtn = new WindowsForms2.CustomButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.materialTxtBox = new WindowsForms2.CustomTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.productNameTxtBox = new WindowsForms2.CustomTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.categoryCbbox = new WindowsForms2.CustomComponent.CustomComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusFilterCbBox = new WindowsForms2.CustomComponent.CustomComboBox();
             this.collectionFilterCbBox = new WindowsForms2.CustomComponent.CustomComboBox();
             this.cateFilterCbBox = new WindowsForms2.CustomComponent.CustomComboBox();
             this.searchTxtBox = new WindowsForms2.CustomTextBox();
-            this.cancelBtn = new WindowsForms2.CustomButton();
-            this.updateProductBtn = new WindowsForms2.CustomButton();
-            this.manageSizeBtn = new WindowsForms2.CustomButton();
-            this.statusCbbox = new WindowsForms2.CustomComponent.CustomComboBox();
-            this.collectionCbbox = new WindowsForms2.CustomComponent.CustomComboBox();
-            this.addAttributeBtn = new WindowsForms2.CustomButton();
-            this.materialTxtBox = new WindowsForms2.CustomTextBox();
-            this.productNameTxtBox = new WindowsForms2.CustomTextBox();
-            this.categoryCbbox = new WindowsForms2.CustomComponent.CustomComboBox();
             this.addProductBtn = new WindowsForms2.CustomButton();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSp)).BeginInit();
@@ -104,6 +104,68 @@
             this.productInfoPanel.TabIndex = 1;
             this.productInfoPanel.Visible = false;
             // 
+            // cancelBtn
+            // 
+            this.cancelBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.cancelBtn.BackgroundColor = System.Drawing.Color.LightSlateGray;
+            this.cancelBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cancelBtn.BorderRadius = 25;
+            this.cancelBtn.BorderSize = 0;
+            this.cancelBtn.FlatAppearance.BorderSize = 0;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.ForeColor = System.Drawing.Color.White;
+            this.cancelBtn.Location = new System.Drawing.Point(794, 152);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(129, 53);
+            this.cancelBtn.TabIndex = 18;
+            this.cancelBtn.Text = "Hủy";
+            this.cancelBtn.TextColor = System.Drawing.Color.White;
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
+            // updateProductBtn
+            // 
+            this.updateProductBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.updateProductBtn.BackgroundColor = System.Drawing.Color.LightSlateGray;
+            this.updateProductBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.updateProductBtn.BorderRadius = 25;
+            this.updateProductBtn.BorderSize = 0;
+            this.updateProductBtn.FlatAppearance.BorderSize = 0;
+            this.updateProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateProductBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateProductBtn.ForeColor = System.Drawing.Color.White;
+            this.updateProductBtn.Location = new System.Drawing.Point(794, 83);
+            this.updateProductBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.updateProductBtn.Name = "updateProductBtn";
+            this.updateProductBtn.Size = new System.Drawing.Size(129, 53);
+            this.updateProductBtn.TabIndex = 17;
+            this.updateProductBtn.Text = "Cập nhật";
+            this.updateProductBtn.TextColor = System.Drawing.Color.White;
+            this.updateProductBtn.UseVisualStyleBackColor = false;
+            // 
+            // manageSizeBtn
+            // 
+            this.manageSizeBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.manageSizeBtn.BackgroundColor = System.Drawing.Color.LightSlateGray;
+            this.manageSizeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.manageSizeBtn.BorderRadius = 25;
+            this.manageSizeBtn.BorderSize = 0;
+            this.manageSizeBtn.FlatAppearance.BorderSize = 0;
+            this.manageSizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageSizeBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageSizeBtn.ForeColor = System.Drawing.Color.White;
+            this.manageSizeBtn.Location = new System.Drawing.Point(794, 14);
+            this.manageSizeBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.manageSizeBtn.Name = "manageSizeBtn";
+            this.manageSizeBtn.Size = new System.Drawing.Size(129, 53);
+            this.manageSizeBtn.TabIndex = 16;
+            this.manageSizeBtn.Text = "Quản lý size";
+            this.manageSizeBtn.TextColor = System.Drawing.Color.White;
+            this.manageSizeBtn.UseVisualStyleBackColor = false;
+            this.manageSizeBtn.Click += new System.EventHandler(this.manageSizeBtn_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -115,6 +177,26 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Thuộc tính sản phẩm";
             // 
+            // statusCbbox
+            // 
+            this.statusCbbox.BackColor = System.Drawing.Color.White;
+            this.statusCbbox.BorderColor = System.Drawing.Color.Silver;
+            this.statusCbbox.BorderSize = 2;
+            this.statusCbbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.statusCbbox.Font = new System.Drawing.Font("HarmonyOS Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusCbbox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.statusCbbox.IconColor = System.Drawing.Color.LightSlateGray;
+            this.statusCbbox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.statusCbbox.ListTextColor = System.Drawing.Color.DimGray;
+            this.statusCbbox.Location = new System.Drawing.Point(13, 163);
+            this.statusCbbox.Margin = new System.Windows.Forms.Padding(2);
+            this.statusCbbox.MinimumSize = new System.Drawing.Size(150, 24);
+            this.statusCbbox.Name = "statusCbbox";
+            this.statusCbbox.Padding = new System.Windows.Forms.Padding(2);
+            this.statusCbbox.Size = new System.Drawing.Size(164, 31);
+            this.statusCbbox.TabIndex = 13;
+            this.statusCbbox.Texts = "";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -125,6 +207,26 @@
             this.label5.Size = new System.Drawing.Size(73, 19);
             this.label5.TabIndex = 12;
             this.label5.Text = "Trạng thái";
+            // 
+            // collectionCbbox
+            // 
+            this.collectionCbbox.BackColor = System.Drawing.Color.White;
+            this.collectionCbbox.BorderColor = System.Drawing.Color.Silver;
+            this.collectionCbbox.BorderSize = 2;
+            this.collectionCbbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.collectionCbbox.Font = new System.Drawing.Font("HarmonyOS Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.collectionCbbox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.collectionCbbox.IconColor = System.Drawing.Color.LightSlateGray;
+            this.collectionCbbox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.collectionCbbox.ListTextColor = System.Drawing.Color.DimGray;
+            this.collectionCbbox.Location = new System.Drawing.Point(225, 163);
+            this.collectionCbbox.Margin = new System.Windows.Forms.Padding(2);
+            this.collectionCbbox.MinimumSize = new System.Drawing.Size(150, 24);
+            this.collectionCbbox.Name = "collectionCbbox";
+            this.collectionCbbox.Padding = new System.Windows.Forms.Padding(2);
+            this.collectionCbbox.Size = new System.Drawing.Size(160, 31);
+            this.collectionCbbox.TabIndex = 11;
+            this.collectionCbbox.Texts = "";
             // 
             // label4
             // 
@@ -147,6 +249,27 @@
             this.flpAttribute.Size = new System.Drawing.Size(362, 182);
             this.flpAttribute.TabIndex = 6;
             // 
+            // addAttributeBtn
+            // 
+            this.addAttributeBtn.BackColor = System.Drawing.Color.Silver;
+            this.addAttributeBtn.BackgroundColor = System.Drawing.Color.Silver;
+            this.addAttributeBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.addAttributeBtn.BorderRadius = 15;
+            this.addAttributeBtn.BorderSize = 0;
+            this.addAttributeBtn.FlatAppearance.BorderSize = 0;
+            this.addAttributeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addAttributeBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addAttributeBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.addAttributeBtn.Location = new System.Drawing.Point(8, 2);
+            this.addAttributeBtn.Margin = new System.Windows.Forms.Padding(8, 2, 2, 2);
+            this.addAttributeBtn.Name = "addAttributeBtn";
+            this.addAttributeBtn.Size = new System.Drawing.Size(95, 29);
+            this.addAttributeBtn.TabIndex = 20;
+            this.addAttributeBtn.Text = "Thêm";
+            this.addAttributeBtn.TextColor = System.Drawing.Color.LightGray;
+            this.addAttributeBtn.UseVisualStyleBackColor = false;
+            this.addAttributeBtn.Click += new System.EventHandler(this.addAttributeBtn_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -157,6 +280,27 @@
             this.label3.Size = new System.Drawing.Size(74, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Danh mục";
+            // 
+            // materialTxtBox
+            // 
+            this.materialTxtBox.BackColor = System.Drawing.Color.White;
+            this.materialTxtBox.BorderColor = System.Drawing.Color.Silver;
+            this.materialTxtBox.BorderFocusColor = System.Drawing.Color.Silver;
+            this.materialTxtBox.BorderRadius = 15;
+            this.materialTxtBox.BorderSize = 2;
+            this.materialTxtBox.Font = new System.Drawing.Font("HarmonyOS Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialTxtBox.Location = new System.Drawing.Point(13, 96);
+            this.materialTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.materialTxtBox.Multiline = false;
+            this.materialTxtBox.Name = "materialTxtBox";
+            this.materialTxtBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.materialTxtBox.PasswordChar = false;
+            this.materialTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.materialTxtBox.PlaceholderText = "Nhập chất liệu";
+            this.materialTxtBox.Size = new System.Drawing.Size(164, 32);
+            this.materialTxtBox.TabIndex = 3;
+            this.materialTxtBox.Texts = "";
+            this.materialTxtBox.UnderlinedStyle = false;
             // 
             // label2
             // 
@@ -169,6 +313,27 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Chất liệu";
             // 
+            // productNameTxtBox
+            // 
+            this.productNameTxtBox.BackColor = System.Drawing.Color.White;
+            this.productNameTxtBox.BorderColor = System.Drawing.Color.Silver;
+            this.productNameTxtBox.BorderFocusColor = System.Drawing.Color.Silver;
+            this.productNameTxtBox.BorderRadius = 15;
+            this.productNameTxtBox.BorderSize = 2;
+            this.productNameTxtBox.Font = new System.Drawing.Font("HarmonyOS Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productNameTxtBox.Location = new System.Drawing.Point(13, 28);
+            this.productNameTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.productNameTxtBox.Multiline = false;
+            this.productNameTxtBox.Name = "productNameTxtBox";
+            this.productNameTxtBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.productNameTxtBox.PasswordChar = false;
+            this.productNameTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.productNameTxtBox.PlaceholderText = "Nhập tên sản phẩm";
+            this.productNameTxtBox.Size = new System.Drawing.Size(373, 32);
+            this.productNameTxtBox.TabIndex = 1;
+            this.productNameTxtBox.Texts = "";
+            this.productNameTxtBox.UnderlinedStyle = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -179,6 +344,26 @@
             this.label1.Size = new System.Drawing.Size(99, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên sản phẩm";
+            // 
+            // categoryCbbox
+            // 
+            this.categoryCbbox.BackColor = System.Drawing.Color.White;
+            this.categoryCbbox.BorderColor = System.Drawing.Color.Silver;
+            this.categoryCbbox.BorderSize = 2;
+            this.categoryCbbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categoryCbbox.Font = new System.Drawing.Font("HarmonyOS Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryCbbox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.categoryCbbox.IconColor = System.Drawing.Color.LightSlateGray;
+            this.categoryCbbox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.categoryCbbox.ListTextColor = System.Drawing.Color.DimGray;
+            this.categoryCbbox.Location = new System.Drawing.Point(225, 96);
+            this.categoryCbbox.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryCbbox.MinimumSize = new System.Drawing.Size(150, 24);
+            this.categoryCbbox.Name = "categoryCbbox";
+            this.categoryCbbox.Padding = new System.Windows.Forms.Padding(2);
+            this.categoryCbbox.Size = new System.Drawing.Size(160, 31);
+            this.categoryCbbox.TabIndex = 7;
+            this.categoryCbbox.Texts = "";
             // 
             // pictureBox1
             // 
@@ -271,191 +456,6 @@
             this.searchTxtBox.TabIndex = 19;
             this.searchTxtBox.Texts = "";
             this.searchTxtBox.UnderlinedStyle = false;
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.cancelBtn.BackgroundColor = System.Drawing.Color.LightSlateGray;
-            this.cancelBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cancelBtn.BorderRadius = 25;
-            this.cancelBtn.BorderSize = 0;
-            this.cancelBtn.FlatAppearance.BorderSize = 0;
-            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(794, 152);
-            this.cancelBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(129, 53);
-            this.cancelBtn.TabIndex = 18;
-            this.cancelBtn.Text = "Hủy";
-            this.cancelBtn.TextColor = System.Drawing.Color.White;
-            this.cancelBtn.UseVisualStyleBackColor = false;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
-            // 
-            // updateProductBtn
-            // 
-            this.updateProductBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.updateProductBtn.BackgroundColor = System.Drawing.Color.LightSlateGray;
-            this.updateProductBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.updateProductBtn.BorderRadius = 25;
-            this.updateProductBtn.BorderSize = 0;
-            this.updateProductBtn.FlatAppearance.BorderSize = 0;
-            this.updateProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateProductBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateProductBtn.ForeColor = System.Drawing.Color.White;
-            this.updateProductBtn.Location = new System.Drawing.Point(794, 83);
-            this.updateProductBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.updateProductBtn.Name = "updateProductBtn";
-            this.updateProductBtn.Size = new System.Drawing.Size(129, 53);
-            this.updateProductBtn.TabIndex = 17;
-            this.updateProductBtn.Text = "Cập nhật";
-            this.updateProductBtn.TextColor = System.Drawing.Color.White;
-            this.updateProductBtn.UseVisualStyleBackColor = false;
-            // 
-            // manageSizeBtn
-            // 
-            this.manageSizeBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.manageSizeBtn.BackgroundColor = System.Drawing.Color.LightSlateGray;
-            this.manageSizeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.manageSizeBtn.BorderRadius = 25;
-            this.manageSizeBtn.BorderSize = 0;
-            this.manageSizeBtn.FlatAppearance.BorderSize = 0;
-            this.manageSizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageSizeBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manageSizeBtn.ForeColor = System.Drawing.Color.White;
-            this.manageSizeBtn.Location = new System.Drawing.Point(794, 14);
-            this.manageSizeBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.manageSizeBtn.Name = "manageSizeBtn";
-            this.manageSizeBtn.Size = new System.Drawing.Size(129, 53);
-            this.manageSizeBtn.TabIndex = 16;
-            this.manageSizeBtn.Text = "Quản lý size";
-            this.manageSizeBtn.TextColor = System.Drawing.Color.White;
-            this.manageSizeBtn.UseVisualStyleBackColor = false;
-            this.manageSizeBtn.Click += new System.EventHandler(this.manageSizeBtn_Click);
-            // 
-            // statusCbbox
-            // 
-            this.statusCbbox.BackColor = System.Drawing.Color.White;
-            this.statusCbbox.BorderColor = System.Drawing.Color.Silver;
-            this.statusCbbox.BorderSize = 2;
-            this.statusCbbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.statusCbbox.Font = new System.Drawing.Font("HarmonyOS Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusCbbox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.statusCbbox.IconColor = System.Drawing.Color.LightSlateGray;
-            this.statusCbbox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.statusCbbox.ListTextColor = System.Drawing.Color.DimGray;
-            this.statusCbbox.Location = new System.Drawing.Point(13, 163);
-            this.statusCbbox.Margin = new System.Windows.Forms.Padding(2);
-            this.statusCbbox.MinimumSize = new System.Drawing.Size(150, 24);
-            this.statusCbbox.Name = "statusCbbox";
-            this.statusCbbox.Padding = new System.Windows.Forms.Padding(2);
-            this.statusCbbox.Size = new System.Drawing.Size(164, 31);
-            this.statusCbbox.TabIndex = 13;
-            this.statusCbbox.Texts = "";
-            // 
-            // collectionCbbox
-            // 
-            this.collectionCbbox.BackColor = System.Drawing.Color.White;
-            this.collectionCbbox.BorderColor = System.Drawing.Color.Silver;
-            this.collectionCbbox.BorderSize = 2;
-            this.collectionCbbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.collectionCbbox.Font = new System.Drawing.Font("HarmonyOS Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.collectionCbbox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.collectionCbbox.IconColor = System.Drawing.Color.LightSlateGray;
-            this.collectionCbbox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.collectionCbbox.ListTextColor = System.Drawing.Color.DimGray;
-            this.collectionCbbox.Location = new System.Drawing.Point(225, 163);
-            this.collectionCbbox.Margin = new System.Windows.Forms.Padding(2);
-            this.collectionCbbox.MinimumSize = new System.Drawing.Size(150, 24);
-            this.collectionCbbox.Name = "collectionCbbox";
-            this.collectionCbbox.Padding = new System.Windows.Forms.Padding(2);
-            this.collectionCbbox.Size = new System.Drawing.Size(160, 31);
-            this.collectionCbbox.TabIndex = 11;
-            this.collectionCbbox.Texts = "";
-            // 
-            // addAttributeBtn
-            // 
-            this.addAttributeBtn.BackColor = System.Drawing.Color.Silver;
-            this.addAttributeBtn.BackgroundColor = System.Drawing.Color.Silver;
-            this.addAttributeBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.addAttributeBtn.BorderRadius = 15;
-            this.addAttributeBtn.BorderSize = 0;
-            this.addAttributeBtn.FlatAppearance.BorderSize = 0;
-            this.addAttributeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addAttributeBtn.Font = new System.Drawing.Font("HarmonyOS Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addAttributeBtn.ForeColor = System.Drawing.Color.LightGray;
-            this.addAttributeBtn.Location = new System.Drawing.Point(8, 2);
-            this.addAttributeBtn.Margin = new System.Windows.Forms.Padding(8, 2, 2, 2);
-            this.addAttributeBtn.Name = "addAttributeBtn";
-            this.addAttributeBtn.Size = new System.Drawing.Size(95, 29);
-            this.addAttributeBtn.TabIndex = 20;
-            this.addAttributeBtn.Text = "Thêm";
-            this.addAttributeBtn.TextColor = System.Drawing.Color.LightGray;
-            this.addAttributeBtn.UseVisualStyleBackColor = false;
-            this.addAttributeBtn.Click += new System.EventHandler(this.addAttributeBtn_Click);
-            // 
-            // materialTxtBox
-            // 
-            this.materialTxtBox.BackColor = System.Drawing.Color.White;
-            this.materialTxtBox.BorderColor = System.Drawing.Color.Silver;
-            this.materialTxtBox.BorderFocusColor = System.Drawing.Color.Silver;
-            this.materialTxtBox.BorderRadius = 15;
-            this.materialTxtBox.BorderSize = 2;
-            this.materialTxtBox.Font = new System.Drawing.Font("HarmonyOS Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialTxtBox.Location = new System.Drawing.Point(13, 96);
-            this.materialTxtBox.Margin = new System.Windows.Forms.Padding(4);
-            this.materialTxtBox.Multiline = false;
-            this.materialTxtBox.Name = "materialTxtBox";
-            this.materialTxtBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.materialTxtBox.PasswordChar = false;
-            this.materialTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.materialTxtBox.PlaceholderText = "Nhập chất liệu";
-            this.materialTxtBox.Size = new System.Drawing.Size(164, 32);
-            this.materialTxtBox.TabIndex = 3;
-            this.materialTxtBox.Texts = "";
-            this.materialTxtBox.UnderlinedStyle = false;
-            // 
-            // productNameTxtBox
-            // 
-            this.productNameTxtBox.BackColor = System.Drawing.Color.White;
-            this.productNameTxtBox.BorderColor = System.Drawing.Color.Silver;
-            this.productNameTxtBox.BorderFocusColor = System.Drawing.Color.Silver;
-            this.productNameTxtBox.BorderRadius = 15;
-            this.productNameTxtBox.BorderSize = 2;
-            this.productNameTxtBox.Font = new System.Drawing.Font("HarmonyOS Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productNameTxtBox.Location = new System.Drawing.Point(13, 28);
-            this.productNameTxtBox.Margin = new System.Windows.Forms.Padding(4);
-            this.productNameTxtBox.Multiline = false;
-            this.productNameTxtBox.Name = "productNameTxtBox";
-            this.productNameTxtBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.productNameTxtBox.PasswordChar = false;
-            this.productNameTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.productNameTxtBox.PlaceholderText = "Nhập tên sản phẩm";
-            this.productNameTxtBox.Size = new System.Drawing.Size(373, 32);
-            this.productNameTxtBox.TabIndex = 1;
-            this.productNameTxtBox.Texts = "";
-            this.productNameTxtBox.UnderlinedStyle = false;
-            // 
-            // categoryCbbox
-            // 
-            this.categoryCbbox.BackColor = System.Drawing.Color.White;
-            this.categoryCbbox.BorderColor = System.Drawing.Color.Silver;
-            this.categoryCbbox.BorderSize = 2;
-            this.categoryCbbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.categoryCbbox.Font = new System.Drawing.Font("HarmonyOS Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryCbbox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.categoryCbbox.IconColor = System.Drawing.Color.LightSlateGray;
-            this.categoryCbbox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.categoryCbbox.ListTextColor = System.Drawing.Color.DimGray;
-            this.categoryCbbox.Location = new System.Drawing.Point(225, 96);
-            this.categoryCbbox.Margin = new System.Windows.Forms.Padding(2);
-            this.categoryCbbox.MinimumSize = new System.Drawing.Size(150, 24);
-            this.categoryCbbox.Name = "categoryCbbox";
-            this.categoryCbbox.Padding = new System.Windows.Forms.Padding(2);
-            this.categoryCbbox.Size = new System.Drawing.Size(160, 31);
-            this.categoryCbbox.TabIndex = 7;
-            this.categoryCbbox.Texts = "";
             // 
             // addProductBtn
             // 

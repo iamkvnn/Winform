@@ -17,6 +17,7 @@ namespace WindowsForms2.DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public category()
         {
+            this.category1 = new HashSet<category>();
             this.products = new HashSet<product>();
         }
     
@@ -24,6 +25,9 @@ namespace WindowsForms2.DAL
         public string name { get; set; }
         public Nullable<long> parent_id { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<category> category1 { get; set; }
+        public virtual category category2 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<product> products { get; set; }
     }

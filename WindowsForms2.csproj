@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -59,6 +74,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CategoryBLL.cs" />
+    <Compile Include="BLL\CollectionBLL.cs" />
     <Compile Include="CustomComponent\AttributeShow.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,30 +112,36 @@
     <Compile Include="CustomComponent\SizeControl.Designer.cs">
       <DependentUpon>SizeControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAL\attribute.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\AttributeDAO.cs" />
-    <Compile Include="DAL\attribute_value.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\Attribute_valueDAO.cs" />
-    <Compile Include="DAL\category.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\collection.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="BLL\AttributeBLL.cs" />
+    <Compile Include="BLL\Attribute_valueBLL.cs" />
     <Compile Include="CustomComponent\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomComponent\CustomTextBox.Designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\CustomerBLL.cs" />
+    <Compile Include="BLL\OrderBLL.cs" />
+    <Compile Include="BLL\Order_itemBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="BLL\ProductBLL.cs" />
+    <Compile Include="BLL\Product_sizeBLL.cs" />
+    <Compile Include="BLL\VoucherBLL.cs" />
+    <Compile Include="DAL\attribute.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\attribute_value.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\category.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\collection.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAL\customer.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\CustomerDAO.cs" />
     <Compile Include="DAL\DataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -134,14 +157,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="DAL\OrderDAO.cs" />
-    <Compile Include="DAL\Order_itemDAO.cs" />
-    <Compile Include="DAL\UserDAO.cs" />
-    <Compile Include="DAL\ProductDAO.cs" />
-    <Compile Include="DAL\Product_sizeDAo.cs" />
-    <Compile Include="DAL\VoucherDAO.cs" />
-    <Compile Include="Exception\AlreadyExistException.cs" />
-    <Compile Include="Exception\ResourceNotFoundException.cs" />
+    <Compile Include="DAL\ModelDAO.cs" />
+    <Compile Include="DAL\notification.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\order.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\order_item.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\product.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\product_size.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\user.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\user_notification.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\voucher.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="exception\AlreadyExistException.cs" />
+    <Compile Include="exception\ResourceNotFoundException.cs" />
     <Compile Include="FORM\fAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +195,12 @@
     </Compile>
     <Compile Include="FORM\fCategory.Designer.cs">
       <DependentUpon>fCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fCustomer.Designer.cs">
+      <DependentUpon>fCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\fDashboard.cs">
       <SubType>Form</SubType>
@@ -190,6 +238,12 @@
     <Compile Include="FORM\fSize.Designer.cs">
       <DependentUpon>fSize.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\fStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fStaff.Designer.cs">
+      <DependentUpon>fStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\fVoucher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,32 +262,8 @@
     <Compile Include="CustomComponent\ModernDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DAL\notification.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\order.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\order_item.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\product.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\product_size.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DAL\user.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\user_notification.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\voucher.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="CustomComponent\AttributeShow.resx">
       <DependentUpon>AttributeShow.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +285,9 @@
     <EmbeddedResource Include="FORM\fCategory.resx">
       <DependentUpon>fCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fCustomer.resx">
+      <DependentUpon>fCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\fDashboard.resx">
       <DependentUpon>fDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\fSize.resx">
       <DependentUpon>fSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fStaff.resx">
+      <DependentUpon>fStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\fVoucher.resx">
       <DependentUpon>fVoucher.cs</DependentUpon>
@@ -360,7 +396,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BAL\" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

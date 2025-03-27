@@ -3,25 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsForms2.Exception;
+using WindowsForms2.exception;
+using WindowsForms2.DAL;
 
-namespace WindowsForms2.DAL
+namespace WindowsForms2.BLL
 {
-    public class ProductDAO
+    public class ProductBLL
     {
-        private jewelryStoreManagementEntities _db;
-        public ProductDAO(jewelryStoreManagementEntities db) {
-            _db = db;
+        private static ProductBLL instance;
+        private jewelryStoreManagementEntities db;
+        private ProductBLL() {
+            db = ModelDAO.Instance.DbContext;
+        }
+
+        public static ProductBLL Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new ProductBLL();
+                }
+                return instance;
+            }
         }
 
         public List<product> GetProducts()
         {
-            return _db.products.ToList();
+            return db.products.ToList();
         }
 
         public product findById(int id)
         {
-            product p = _db.products.Find(id);
+            product p = db.products.Find(id);
             if (p == null)
                 throw new ResourceNotFoundException("Không tìm thấy sản phẩm");
             return p;
@@ -29,7 +43,7 @@ namespace WindowsForms2.DAL
 
         public product findByTitle(string title)
         {
-            product p = _db.products.Where(product => product.title == title).FirstOrDefault();
+            product p = db.products.Where(product => product.title == title).FirstOrDefault();
             if (p == null)
                 throw new ResourceNotFoundException("Không tìm thấy sản phẩm");
             return p;
@@ -42,12 +56,12 @@ namespace WindowsForms2.DAL
 
         public product save(product product)
         {
-            return _db.products.Add(product);
+            return db.products.Add(product);
         }
 
         public void deleteById(int id)
         {
-            _db.products.Remove(findById(id));
+            db.products.Remove(findById(id));
         }
     }
 }

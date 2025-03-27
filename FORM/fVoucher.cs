@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsForms2.DAL;
+using WindowsForms2.BLL;
 
 namespace WindowsForms2.FORM
 {
     public partial class fVoucher: Form
     {
-        public fVoucher(jewelryStoreManagementEntities db)
+        private VoucherBLL _voucherBLL;
+        public fVoucher()
         {
+            _voucherBLL = VoucherBLL.Instance;
             InitializeComponent();
         }
     }

@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsForms2.BLL;
 using WindowsForms2.DAL;
 
 namespace WindowsForms2.FORM
 {
     public partial class fSize: Form
     {
-        public fSize(jewelryStoreManagementEntities db, long pid)
+        private Product_sizeBLL _product_SizeBLL;
+        public fSize(long pid)
         {
             InitializeComponent();
-            dgvSize.DataSource = db.product_size.Where(s => s.product_id == pid).Select(s => new
+            _product_SizeBLL = Product_sizeBLL.Instance;
+            dgvSize.DataSource = _product_SizeBLL.GetProduct_Sizes().Where(s => s.product_id == pid).Select(s => new
             {
                 s.id,
                 s.size,

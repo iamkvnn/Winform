@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsForms2.DAL;
 
 namespace WindowsForms2.FORM
 {
-    public partial class fPayment: Form
+    public partial class fCustomer: Form
     {
-        public fPayment()
+        public fCustomer()
         {
             InitializeComponent();
         }

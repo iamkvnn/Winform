@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsForms2.Exception
+namespace WindowsForms2.exception
 {
     public class AlreadyExistException : ApplicationException
     {

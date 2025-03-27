@@ -8,26 +8,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsForms2.DAL;
-using WindowsForms2.Exception;
+using WindowsForms2.BLL;
+using WindowsForms2.exception;
 using WindowsForms2.CustomComponent;
 
 namespace WindowsForms2.FORM
 {
     public partial class fProduct: Form
     {
-        private ProductDAO productDAO;
-        private jewelryStoreManagementEntities _db;
-        public fProduct(jewelryStoreManagementEntities db)
+        private ProductBLL _productBLL;
+        private Product_sizeBLL _product_SizeBLL;
+        private CategoryBLL _categoryBLL;
+        private CollectionBLL _collectionBLL;
+        private Attribute_valueBLL _attribute_ValueBLL;
+        public fProduct()
         {
             InitializeComponent();
-            _db = db;
-            productDAO = new ProductDAO(db);
+            _productBLL = ProductBLL.Instance;
+            _product_SizeBLL = Product_sizeBLL.Instance;
+            _categoryBLL = CategoryBLL.Instance;
+            _collectionBLL = CollectionBLL.Instance;
+            _attribute_ValueBLL = Attribute_valueBLL.Instance;
             LoadProduct();
         }
 
         private void LoadProduct()
         {
-            dgvSp.DataSource = productDAO.GetProducts().Select(p => new
+            dgvSp.DataSource = _productBLL.GetProducts().Select(p => new
             {
                 p.id,
                 p.title,
@@ -56,13 +63,13 @@ namespace WindowsForms2.FORM
                 int productId = Convert.ToInt32(row.Cells["id"].Value);
                 productNameTxtBox.Texts = row.Cells["title"].Value.ToString();
                 materialTxtBox.Texts = row.Cells["material"].Value.ToString();
-                categoryCbbox.DataSource = _db.categories.Select(c => c.name).ToList();
-                collectionCbbox.DataSource = _db.collections.Select(c => c.name).ToList();
-                statusCbbox.DataSource = new List<string> { "INSTOCK", "OUT_OF_STOCK" };
+                categoryCbbox.DataSource = _categoryBLL.GetCategories().Select(c => c.name).ToList();
+                collectionCbbox.DataSource = _collectionBLL.GetCollections().Select(c => c.name).ToList();
+                statusCbbox.DataSource = new List<string> { "IN_STOCK", "OUT_OF_STOCK" };
                 categoryCbbox.Texts = row.Cells["category"].Value?.ToString() ?? string.Empty;
                 collectionCbbox.Texts = row.Cells["collection"].Value?.ToString() ?? string.Empty;
                 statusCbbox.Texts = row.Cells["status"].Value.ToString();
-                List<attribute_value> productAttributes = _db.attribute_value.Where(pa => pa.product_id == productId).ToList();
+                List<attribute_value> productAttributes = _productBLL.findById(productId).attribute_value.ToList();
                 CustomButton button = addAttributeBtn;
                 flpAttribute.Controls.Clear();
                 foreach (attribute_value pa in productAttributes)
@@ -117,8 +124,8 @@ namespace WindowsForms2.FORM
             string title = productNameTxtBox.Texts;
             try
             {
-                product p = productDAO.findByTitle(title);
-                fSize fSize = new fSize(_db, p.id);
+                product p = _productBLL.findByTitle(title);
+                fSize fSize = new fSize(p.id);
                 using (fBlur f = new fBlur(JewelryManagementApp.ActiveForm))
                 {
                     f.Show();

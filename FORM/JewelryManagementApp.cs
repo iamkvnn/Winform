@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsForms2.DAL;
+using WindowsForms2.BLL;
 
 namespace WindowsForms2.FORM
 {
@@ -18,12 +19,10 @@ namespace WindowsForms2.FORM
         private int borderSize = 0;
         private Form activeForm;
         private Button currentButton;
-        private jewelryStoreManagementEntities _db;
-        public JewelryManagementApp(jewelryStoreManagementEntities db)
+        public JewelryManagementApp()
         {
             this.Padding = new Padding(borderSize);
             InitializeComponent();
-            _db = db;
             btn_Dashboard_Click(btn_Dashboard, new EventArgs());
         }
 
@@ -76,7 +75,7 @@ namespace WindowsForms2.FORM
 
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fDashboard(_db), sender as Button);
+            OpenChildForm(new fDashboard(), sender as Button);
         }
 
         private void ActivateButton(Button btnSender)
@@ -124,27 +123,32 @@ namespace WindowsForms2.FORM
 
         private void btnSp_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fProduct(_db), sender as Button);
+            OpenChildForm(new fProduct(), sender as Button);
         }
 
         private void cateBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fCategory(_db), sender as Button);
+            OpenChildForm(new fCategory(), sender as Button);
         }
 
         private void orderBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fOrder(_db), sender as Button);
+            OpenChildForm(new fOrder(), sender as Button);
         }
 
         private void voucherBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fVoucher(_db), sender as Button);
+            OpenChildForm(new fVoucher(), sender as Button);
         }
 
-        private void paymentBtn_Click(object sender, EventArgs e)
+        private void customerBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fPayment(_db), sender as Button);
+            OpenChildForm(new fCustomer(), sender as Button);
+        }
+
+        private void staffBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new fStaff(), sender as Button);
         }
     }
 }

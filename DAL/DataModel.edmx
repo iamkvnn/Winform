@@ -278,6 +278,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_pcategory">
+          <End Role="category" Type="Self.category" Multiplicity="0..1" />
+          <End Role="category1" Type="Self.category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="category">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="category1">
+              <PropertyRef Name="parent_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_product_category">
           <End Role="category" Type="Self.category" Multiplicity="0..1" />
           <End Role="product" Type="Self.product" Multiplicity="*" />
@@ -389,6 +401,10 @@
             <End Role="users" EntitySet="users" />
             <End Role="orders" EntitySet="orders" />
           </AssociationSet>
+          <AssociationSet Name="FK_pcategory" Association="Self.FK_pcategory">
+            <End Role="category" EntitySet="category" />
+            <End Role="category1" EntitySet="category" />
+          </AssociationSet>
           <AssociationSet Name="FK_product_category" Association="Self.FK_product_category">
             <End Role="category" EntitySet="category" />
             <End Role="product" EntitySet="product" />
@@ -441,6 +457,8 @@
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="parent_id" Type="Int64" />
+          <NavigationProperty Name="category1" Relationship="Self.FK_pcategory" FromRole="category" ToRole="category1" />
+          <NavigationProperty Name="category2" Relationship="Self.FK_pcategory" FromRole="category1" ToRole="category" />
           <NavigationProperty Name="products" Relationship="Self.FK_product_category" FromRole="category" ToRole="product" />
         </EntityType>
         <EntityType Name="collection">
@@ -622,6 +640,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_pcategory">
+          <End Role="category" Type="Self.category" Multiplicity="0..1" />
+          <End Role="category1" Type="Self.category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="category">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="category1">
+              <PropertyRef Name="parent_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_product_category">
           <End Role="category" Type="Self.category" Multiplicity="0..1" />
           <End Role="product" Type="Self.product" Multiplicity="*" />
@@ -767,6 +797,10 @@
           <AssociationSet Name="FK_attribute_value_product" Association="Self.FK_attribute_value_product">
             <End Role="product" EntitySet="products" />
             <End Role="attribute_value" EntitySet="attribute_value" />
+          </AssociationSet>
+          <AssociationSet Name="FK_pcategory" Association="Self.FK_pcategory">
+            <End Role="category" EntitySet="categories" />
+            <End Role="category1" EntitySet="categories" />
           </AssociationSet>
           <AssociationSet Name="FK_product_category" Association="Self.FK_product_category">
             <End Role="category" EntitySet="categories" />
